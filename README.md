@@ -1,22 +1,22 @@
 # shw-ui-tokens
 
-English | [简体中文](./README.zh-CN.md) | [繁體中文](./README.zh-TW.md)
+简体中文 | [English](./README.en.md) | [繁體中文](./README.zh-TW.md)
 
-Shared design tokens for web, WeChat Mini Programs and native clients. The package resolves light and dark themes, renders CSS and WXSS variables, and exports a JSON subset for native resource generation.
+为 Web、微信小程序和原生客户端提供共享设计令牌。此软件包可解析亮色和暗色主题，生成 CSS 与 WXSS 变量，并导出用于生成原生资源的 JSON 子集。
 
-## Install
+## 安装
 
-The GitHub release includes a public npm tarball. Install it without npm or GitHub credentials:
+GitHub Release 提供公开的 npm 压缩包，无需 npm 或 GitHub 凭据即可安装：
 
 ```sh
 npm install https://github.com/shyun-cc/shw-ui-tokens/releases/download/v0.33.1/shwkj-shw-ui-tokens-0.33.1.tgz
 ```
 
-Use `resolveTheme(input, mode)` for runtime values. Import `@shwkj/shw-ui-tokens/default.css` for web defaults, use `default.wxss` in Mini Programs, or read the `tokens.json` export to generate native resources. The package also provides the `shw-ui-theme` command for generating theme files.
+使用 `resolveTheme(input, mode)` 获取运行时的值。Web 可导入 `@shwkj/shw-ui-tokens/default.css` 使用默认值，小程序可使用 `default.wxss`，原生端可读取导出的 `tokens.json` 以生成资源。软件包还提供 `shw-ui-theme` 命令来生成主题文件。
 
-## Develop
+## 开发
 
-Use Node.js 24 and pnpm 11.0.9.
+使用 Node.js 24 和 pnpm 11.0.9。
 
 ```sh
 pnpm install --frozen-lockfile
@@ -24,16 +24,16 @@ pnpm typecheck
 pnpm build
 ```
 
-The build generates and compares the CSS, WXSS and native outputs and verifies the command-line interface. The distributable npm archive is generated with `npm pack` after the build.
+构建过程会生成并对比 CSS、WXSS 和原生端产物，同时验证命令行工具。构建后可用 `npm pack` 生成可分发的 npm 压缩包。
 
-## Acknowledgments & Licenses
+## 鸣谢与第三方版权
 
-- [Björn Ottosson’s Oklab reference implementation](https://bottosson.github.io/posts/oklab/) supplies the conversion formulas used in `src/color.ts`. The [original MIT notice](LICENSES/oklab.MIT.txt) is shipped with the package.
-- The [Design Tokens Community Group Format Module](https://www.designtokens.org/tr/2025.10/format/) is a related specification published under the [W3C Community Final Specification Agreement](https://www.w3.org/community/about/agreements/final/). This library exports its own JSON schema along with CSS and WXSS.
-- [TypeScript](https://github.com/microsoft/TypeScript) ([Apache-2.0](https://github.com/microsoft/TypeScript/blob/v5.9.3/LICENSE.txt)) compiles the library. [Node.js](https://nodejs.org/) ([MIT and bundled third-party notices](https://github.com/nodejs/node/blob/v24.x/LICENSE)) runs the generator and CLI. [pnpm](https://pnpm.io/) ([MIT](https://github.com/pnpm/pnpm/blob/main/LICENSE)) manages development dependencies.
+- [Björn Ottosson 的 Oklab 参考实现](https://bottosson.github.io/posts/oklab/)提供了 `src/color.ts` 使用的转换公式。软件包附带[原始 MIT 声明](LICENSES/oklab.MIT.txt)。
+- [Design Tokens Community Group 格式模块](https://www.designtokens.org/tr/2025.10/format/)是相关规范，按 [W3C Community Final Specification Agreement](https://www.w3.org/community/about/agreements/final/) 发布。本库导出自己的 JSON Schema，以及 CSS 和 WXSS。
+- [TypeScript](https://github.com/microsoft/TypeScript)（[Apache-2.0](https://github.com/microsoft/TypeScript/blob/v5.9.3/LICENSE.txt)）用于编译。[Node.js](https://nodejs.org/)（[MIT 及随附的第三方声明](https://github.com/nodejs/node/blob/v24.x/LICENSE)）运行生成器和命令行工具。[pnpm](https://pnpm.io/)（[MIT](https://github.com/pnpm/pnpm/blob/main/LICENSE)）管理开发依赖。
 
-See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the scope of the Oklab attribution.
+Oklab 的署名范围见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
-## License
+## 许可证
 
-[MIT](LICENSE).
+[MIT](LICENSE)。

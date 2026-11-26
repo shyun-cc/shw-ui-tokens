@@ -1,6 +1,6 @@
 # shw-ui-tokens
 
-[English](./README.md) | [简体中文](./README.zh-CN.md) | 繁體中文
+[简体中文](./README.md) | [English](./README.en.md) | 繁體中文
 
 為 Web、微信小程式和原生用戶端提供共享設計權杖。此套件可解析亮色和暗色主題，產生 CSS 與 WXSS 變數，並匯出用於產生原生資源的 JSON 子集。
 
