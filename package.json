@@ -1,0 +1,42 @@
+{
+  "name": "@shwkj/shw-ui-tokens",
+  "version": "0.33.1",
+  "description": "设计 token → CSS 变量 / WXSS 渲染",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/gen-assets.mjs && node scripts/check-parity.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "typescript": "~5.9.3"
+  },
+  "bin": {
+    "shw-mui-theme": "bin/shw-mui-theme.js",
+    "shw-ui-theme": "bin/shw-mui-theme.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./default.css": "./dist/default.css",
+    "./default.wxss": "./dist/default.wxss",
+    "./tokens.json": "./dist/tokens.json"
+  },
+  "packageManager": "pnpm@11.0.9",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shyun-cc/shw-ui-tokens.git"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

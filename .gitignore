@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.tgz
+.npmrc
+.env.local
+.env.*.local
+.DS_Store
