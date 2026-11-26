@@ -1,5 +1,7 @@
 # shw-ui-tokens
 
+English | [简体中文](./README.zh-CN.md) | [繁體中文](./README.zh-TW.md)
+
 Shared design tokens for web, WeChat Mini Programs and native clients. The package resolves light and dark themes, renders CSS and WXSS variables, and exports a JSON subset for native resource generation.
 
 ## Install
@@ -24,7 +26,7 @@ pnpm build
 
 The build generates and compares the CSS, WXSS and native outputs and verifies the command-line interface. The distributable npm archive is generated with `npm pack` after the build.
 
-## 鸣谢与第三方版权（Acknowledgments & Licenses）
+## Acknowledgments & Licenses
 
 - [Björn Ottosson’s Oklab reference implementation](https://bottosson.github.io/posts/oklab/) supplies the conversion formulas used in `src/color.ts`. The [original MIT notice](LICENSES/oklab.MIT.txt) is shipped with the package.
 - The [Design Tokens Community Group Format Module](https://www.designtokens.org/tr/2025.10/format/) is a related specification published under the [W3C Community Final Specification Agreement](https://www.w3.org/community/about/agreements/final/). This library exports its own JSON schema along with CSS and WXSS.
